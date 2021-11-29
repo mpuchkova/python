@@ -38,4 +38,5 @@ elif i=="Удалить":
     item=input("Введите название предмета,который хотите удалить  ")
     del inventory[item]
 
+
 print(inventory)
