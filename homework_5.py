@@ -41,6 +41,7 @@ def Fibonachi(x):
 print("____Ex 1____")
 print(password())
 
+
 print("____Ex 2____")
 print(sum())
 print("2+2=",sum(2,2))
@@ -53,4 +54,3 @@ print("____Ex 3____")
 print("Первое число Фибоначчи",Fibonachi(1))
 print("Пятое число Фибоначчи",Fibonachi(5))
 print("Восьмое число Фибоначчи",Fibonachi(8))
-print("Восьмое число Фибоначчи",Fibonachi(8.7678))
