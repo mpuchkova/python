@@ -5,59 +5,52 @@ def password():
     if (len(str)>=6):
         try:
             int(str)
-            print("False")
+            return("False")
         except:
             str=str.lower()
             if "password" in str:
-                print("False") 
+                return("False") 
             else:
                 for i in range(len(str)):
                     try:
                         int(str[i])
-                        print("True")
+                        return("True")
                         break
                     except:
                         count+=1
                 if count==len(str):
-                    print("False")
+                    return("False")
     else:
-        print("False")
+        return("False")
 
-def sum():
-    a=input("Введите числа через пробел, сумму которых хотите узнать  ").split()
+
+def sum(*args):
     rez=0
-    try:
-        for i in range(len(a)):
-            a[i]=float(a[i])
-            rez+=a[i]
-        print(rez)
-    except:
-        print("Неверно введены числа")
+    for i in args:
+        rez+=i
+    return(rez)
     
 
-def Fibbonachi():
-    c=[]
-    b=input("Введите целое число для нахождения числа Фиббоначи  ")
-    try:
-        n=int(b)
-    except:
-        print("Неверно введено число")
-        exit()
-    if n==0:
-        print(0)
-        exit()
-    for i in range(n+1):
-        c.append(0)
-    c[1]=1
-    for i in range (2,n+1):
-        c[i]=c[i-1]+c[i-2]
-    return(c[n])
+def Fibonachi(x):
+    x=int(x)
+    if x in (1, 2):
+        return 1
+    else:
+        return Fibonachi(x - 1) + Fibonachi(x - 2)
 
 print("____Ex 1____")
-password()
+print(password())
 
 print("____Ex 2____")
-sum()
+print(sum())
+print("2+2=",sum(2,2))
+print("2,5+2,5=",sum(2.5,2.5))
+print("-7+8+9-5=",sum(-7,8,9,-5))
+print("10+30.1=",sum(10,30.1))
+
 
 print("____Ex 3____")
-print(Fibbonachi())
+print("Первое число Фибоначчи",Fibonachi(1))
+print("Пятое число Фибоначчи",Fibonachi(5))
+print("Восьмое число Фибоначчи",Fibonachi(8))
+print("Восьмое число Фибоначчи",Fibonachi(8.7678))
