@@ -1,5 +1,5 @@
-
 def password():
+    """return TRUE- if password fits, else FALSE"""
     str=input("Введите строку-пароль  ")
     count=0
     if (len(str)>=6):
@@ -25,6 +25,7 @@ def password():
 
 
 def sum(*args):
+    """return sum of all arguments"""
     rez=0
     for i in args:
         rez+=i
@@ -32,6 +33,7 @@ def sum(*args):
     
 
 def Fibonachi(x):
+    """"return Fibonachi numbers by number"""
     x=int(x)
     if x in (1, 2):
         return 1
@@ -41,14 +43,12 @@ def Fibonachi(x):
 print("____Ex 1____")
 print(password())
 
-
 print("____Ex 2____")
 print(sum())
 print("2+2=",sum(2,2))
 print("2,5+2,5=",sum(2.5,2.5))
 print("-7+8+9-5=",sum(-7,8,9,-5))
 print("10+30.1=",sum(10,30.1))
-
 
 print("____Ex 3____")
 print("Первое число Фибоначчи",Fibonachi(1))

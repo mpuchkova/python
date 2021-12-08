@@ -7,7 +7,8 @@ y=0
 step=-1
 print("  Начальное положение (0,0)")
 direction=input("Введите нужное направление(вправо,влево,вниз,вверх)  ")
-while ((direction!="вправо") and (direction!="влево") and (direction!="вверх") and (direction!="вниз")):
+while ((direction!="вправо") and (direction!="влево") 
+        and (direction!="вверх") and (direction!="вниз")):
     print("Вы некорректно ввели направление,попробуйте снова. ")
     direction=input("Введите нужное направление(вправо,влево,вниз,вверх)  ")
 
@@ -37,7 +38,8 @@ while True:
     direction=input("Введите нужное направление(вправо,влево,вниз,вверх)  ")
     if direction=="stop":
         break
-    while ((direction!="вправо") and (direction!="влево") and (direction!="вверх") and (direction!="вниз")) and ((direction!="stop")):
+    while ((direction!="вправо") and (direction!="влево") and (direction!="вверх")
+            and (direction!="вниз")) and ((direction!="stop")):
         print("Вы некорректно ввели направление,попробуйте снова. ")
         direction=input("Введите нужное направление(вправо,влево,вниз,вверх)  ")
     if direction=="stop":
